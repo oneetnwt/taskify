@@ -20,7 +20,7 @@ app.use(cookieParser())
 
 // App Routes
 app.get('/', (req, res) => {
-    res.send("Welcome to Taskify API")
+    res.json({ status: "Healthy", message: "Welcome to Taskify API" })
 })
 app.use('/auth', authRoutes)
 app.use('/api', taskRoutes)

@@ -1,1 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 @import "tailwindcss";
+
+:root {
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+
+    --background: #151314;
+    --card-background: #1F1F1F;
+    --dark-blue: #0D5699;
+    --light-blue: #168FFF;
+    --link-blue: #73BCFF;
+    --dark-red: ##421C1D;
+    --light-red: #F74141;
+    --dark-green: #15381F;
+    --light-green: #17CB49;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-0.5rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fade-in 0.3s ease-out forwards;
+}
