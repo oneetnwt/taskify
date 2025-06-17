@@ -19,12 +19,15 @@ app.use(cors())
 app.use(cookieParser())
 
 // App Routes
+app.get('/', (req, res) => {
+    res.send("Welcome to Taskify API")
+})
 app.use('/auth', authRoutes)
 app.use('/api', taskRoutes)
 
 // Entry point
 const PORT = process.env.PORT || 5001
 app.listen(PORT, () => {
-    console.log(`Listening to port ${PORT}`)
+    console.log(`Listening on port ${PORT}`)
     connectDB();
 })
